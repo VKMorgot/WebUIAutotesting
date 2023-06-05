@@ -1,0 +1,591 @@
+{
+  "id": "fd43cb59-b527-482d-a2f4-378a5dd3a11b",
+  "version": "2.0",
+  "name": "LJTestSeleniumIDE",
+  "url": "https://www.livejournal.com",
+  "tests": [{
+    "id": "16bd3feb-b8ba-42bb-b393-c3e9f7a011e2",
+    "name": "010. Sign in/Sign out",
+    "commands": [{
+      "id": "c1de50a0-8f44-4361-bc1b-c967cd0a3615",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "884a0dba-979a-4b83-a78a-ced175dc454a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": "20000"
+    }, {
+      "id": "bf0d456c-66a6-4e86-90b4-a18ee2223304",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.s-header-item__link--login",
+      "targets": [],
+      "value": "ВОЙТИ"
+    }, {
+      "id": "455dc37b-6695-4646-9b92-856dd603d4ca",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@href=\"https://www.livejournal.com/create\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f72e1d32-6b07-4f20-9847-861a8c043713",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "121deae9-1054-4d95-9ec1-45309cc4e604",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=user",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8684e5bb-d5c0-4bfd-95cf-b4b0552b2ded",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5f5b4c8-04b9-452b-9d90-42064cef727e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=action:login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fb32874-e44c-4ba6-8a39-81d499612cb7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "name=action:login",
+      "targets": [],
+      "value": "Войти"
+    }, {
+      "id": "6e8c5be1-a405-42ae-9a1b-334db26a79a7",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "LJGBTest"
+    }, {
+      "id": "ba1818a7-c2f6-487f-88f5-f6c19f798bf1",
+      "comment": "",
+      "command": "type",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "r6A^%J6AZ.WUWck"
+    }, {
+      "id": "e66763f6-aca7-443a-8999-607668f983ce",
+      "comment": "",
+      "command": "click",
+      "target": "name=action:login",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[3]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb2024b3-7afb-4c0a-90c6-fd4ace8446c5",
+      "comment": "Если раскомментить, возникает ошибка: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received",
+      "command": "//waitForElementNotPresent",
+      "target": "name=action:login",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8df3d561-cf28-4288-b6e8-44228efe71f1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.s-header-item--user",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5388e4df-dbdb-484b-8ebd-afe6a7cbbb96",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@href=\"https://www.livejournal.com/post\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfcd948c-e7ef-4967-9bc6-4db8947469dd",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16250656-c5f8-4171-b16c-a0d1e1f6e07f",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "//a[@href=\"https://www.livejournal.com/create\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b30010f-9f16-426e-92e2-340318535bd4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.s-header-item--user",
+      "targets": [
+        ["css=.s-header-item--user", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[5]/header/div/nav[2]/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//nav[2]/ul/li[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "694cffd0-6674-4a49-bc6b-5218432fed1e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.s-header-sub-list-item__link--logout",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a0ecbf6-9088-41de-824c-98ff1aa32e3d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.s-header-sub-list-item__link--logout",
+      "targets": [],
+      "value": "ВЫЙТИ"
+    }, {
+      "id": "037ce248-61f2-4f1f-8b3d-024eb205e15b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-sub-list-item__link--logout",
+      "targets": [
+        ["css=.s-header-sub-list-item__link--logout", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/ul/li[16]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/logout.bml?ret=1&user=ljgbtest&sessid=5')]", "xpath:href"],
+        ["xpath=//li[16]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "188bfab1-1b2d-457d-8df3-cb4ff53e05cf",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.s-header-item--user",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e855734b-ea24-4e71-8d4c-7c0cb7a7594e",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "//a[@href=\"https://www.livejournal.com/post\"]",
+      "targets": [
+        ["css=.s-header-item-post--long", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[4]/header/div/nav[2]/ul/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fb000e6-2efb-4a49-bd66-94ab5d47a89b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6b45fe9-e570-47a8-a541-e6b32e060aa6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//a[@href=\"https://www.livejournal.com/create\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f9b77dc-1d59-44c4-8b8b-da5f693a234a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b0d91178-683a-4ba0-98e4-70d4d01efe64",
+    "name": "000. Sign out",
+    "commands": [{
+      "id": "d552cada-fa83-4d3c-ac70-42b34d397e30",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab305c02-ca42-4741-8f29-6f361a6d658f",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "//a[contains(@class, 's-header-item__link--user')]",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "9fe23146-d6cf-4e09-959b-499713092830",
+      "comment": "",
+      "command": "if",
+      "target": "${num} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "967a1396-7869-42c1-9336-c20a6b838de6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.s-header-item__link--user",
+      "targets": [
+        ["css=.s-header-item--user", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[5]/header/div/nav[2]/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//nav[2]/ul/li[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dde9b3d-397a-4b49-a0c5-3a5d9ae86d3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-sub-list-item__link--logout",
+      "targets": [
+        ["css=.s-header-sub-list-item__link--logout", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/ul/li[16]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/logout.bml?ret=1&user=ljgbtest&sessid=5')]", "xpath:href"],
+        ["xpath=//li[16]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1823d92d-214b-422f-b486-785f3c32e733",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce3ae8ea-8c22-4eab-846f-5cbfd1f6cd55",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c84ae6b8-0904-49c1-be20-97035047435c",
+    "name": "015. Sign out",
+    "commands": [{
+      "id": "9122622b-68d9-4f89-a847-baf6f8faf166",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15921d79-b02b-4a03-b864-994dafe6d235",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "//a[contains(@class, 's-header-item__link--user')]",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "3b0d5f96-76a7-413d-afb2-c42a3f0f2ea6",
+      "comment": "",
+      "command": "if",
+      "target": "${num} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae7f6ead-3a38-4f9a-97cd-ca2ccb72089d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.s-header-item__link--user",
+      "targets": [
+        ["css=.s-header-item--user", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[5]/header/div/nav[2]/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//nav[2]/ul/li[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56ccb79b-29fd-43cd-b525-d964c16aae75",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-sub-list-item__link--logout",
+      "targets": [
+        ["css=.s-header-sub-list-item__link--logout", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/ul/li[16]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/logout.bml?ret=1&user=ljgbtest&sessid=5')]", "xpath:href"],
+        ["xpath=//li[16]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f530a13-77b3-478e-aeb0-2d86306c5252",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7df54c3f-f87d-4bc4-a187-43fc1d840209",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6b8ca0f3-97b0-4d81-b0d4-0d101cebd4a2",
+    "name": "020. New faces",
+    "commands": [{
+      "id": "b89a47e1-9b5b-4cb6-a7ea-69486580a5b4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9b24367-27ff-4465-adf4-f1a3e7ae2aa7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": "20000"
+    }, {
+      "id": "5d7dc6c2-740a-4888-a52c-ae66b8fc2d42",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.s-header-item__link--login",
+      "targets": [],
+      "value": "ВОЙТИ"
+    }, {
+      "id": "298218cc-9b81-490f-b16c-6319ed9c6e5c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@href=\"https://www.livejournal.com/create\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07d1a1ad-dcdc-43e8-848a-ec68d02da159",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d259b9b-0e39-4083-b9aa-ed02ec8dfe8b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=user",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "794ca56e-f0f4-459f-8992-ba40797480e3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63f9413b-4346-4735-8b91-31fa96735328",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=action:login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[3]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a81a2713-6c97-45cb-86c3-8b40ea323d02",
+      "comment": "",
+      "command": "verifyText",
+      "target": "name=action:login",
+      "targets": [],
+      "value": "Войти"
+    }, {
+      "id": "530d0468-c387-4f44-8df7-19898d16e74e",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "LJGBTest"
+    }, {
+      "id": "61a2fb83-6f2c-46f1-a07f-bb2b4b5fb272",
+      "comment": "",
+      "command": "type",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "r6A^%J6AZ.WUWck"
+    }, {
+      "id": "551e68c9-6d9d-4971-9e3d-d02d85caa262",
+      "comment": "",
+      "command": "click",
+      "target": "name=action:login",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[3]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64d9cf97-25a8-4488-98b8-6821015ec66f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(text(),'Новые лица')]",
+      "targets": [
+        ["css=.categories__item--popup-open > .categories__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Новые лица')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[4]/div[3]/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/category/novye_lica/')]", "xpath:href"],
+        ["xpath=//div/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0c13642-ccf6-46a6-b58f-783adb2159d2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Новые лица')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fed2649-30df-4ff5-a79b-10b18bacfe15",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.mainpage__title",
+      "targets": [
+        ["css=.mainpage__title", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[4]/div[3]/div/div[3]/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cc9e1e9-10f2-44ba-9611-ab0d75937f52",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mainpage__title",
+      "targets": [],
+      "value": "НОВЫЕ ЛИЦА"
+    }, {
+      "id": "adaddb0d-54b0-4c06-9b42-cc50ba97bf3e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f1bb27ec-90fc-42d3-8bb9-61a06a39394b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["16bd3feb-b8ba-42bb-b393-c3e9f7a011e2", "b0d91178-683a-4ba0-98e4-70d4d01efe64"]
+  }],
+  "urls": ["https://www.livejournal.com/"],
+  "plugins": []
+}
