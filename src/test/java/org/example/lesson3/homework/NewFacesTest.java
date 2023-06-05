@@ -59,12 +59,8 @@ public class NewFacesTest {
             new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".s-header-item--user")));
 
             // переходим на раздел "Новые лица"
-            try {
-                WebElement newFaces = driver.findElement(By.linkText(NEW_FACES));
-                newFaces.click();
-            } catch (NoSuchElementException exception) {
-                exception.getSupportUrl();
-            }
+            WebElement newFaces = driver.findElement(By.linkText(NEW_FACES));
+            newFaces.click();
 
             // проверяем, что переход произошел
             new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.titleIs(NEW_FACES_TITLE));
