@@ -1,41 +1,71 @@
 package lesson4.homework;
 
+import com.fasterxml.jackson.core.JsonpCharacterEscapes;
+
+import java.math.MathContext;
+
 /**
  * Класс для подсчета площади треугольника по трем известным сторонам
  */
 public class TriangleApp {
 
     /**
+     * Проверка, что стороны положительные
+     * @param a первая сторона
+     * @param b вторая сторона
+     * @param c третья сторона
+     * @return результат проверки
+     */
+    private boolean checkSides(int a, int b, int c) {
+        return a >= 0 && b >=0 && c>= 0;
+    }
+
+    /**
+     * Проверка, что сумма двух любых сторон больше третьей стороны
+     * @param a первая сторона
+     * @param b вторая сторона
+     * @param c третья сторона
+     * @return результат проверки
+     */
+    private boolean checkTriangle(int a, int b, int c) {
+        return (a + b) > c && (a + c) > b && (b + c) > a;
+    }
+
+    /**
      * Вычитаем из одного числа другое
-     * @param x - уменьшаемое
-     * @param y - вычитаемое
+     * @param x уменьшаемое
+     * @param y вычитаемое
      * @return разность чисел
      */
-    private int sub(int x, int y) {
+    private double sub(double x, int y) {
         return x - y;
     }
 
     /**
-     * Определяем периметр треугольника
-     * @param a - первая сторона
-     * @param b - вторая сторона
-     * @param c - третья сторона
-     * @return периметр треугольника
+     * Определяем полупериметр треугольника
+     * @param a первая сторона
+     * @param b вторая сторона
+     * @param c третья сторона
+     * @return полупериметр треугольника
      */
-    private int trPerimeter(int a, int b, int c) {
-        return a + b + c;
+    private double trPerimeter2(int a, int b, int c) {
+        return (a + b + c) / 2.0;
     }
 
     /**
      * Определяем площадь треугольника по трем сторонам
-     * @param a - первая сторона
-     * @param b - вторая сторона
-     * @param c - третья сторона
+     * @param a первая сторона
+     * @param b вторая сторона
+     * @param c третья сторона
      * @return площадь треугольника
      */
-    public double trArea(int a, int b, int c) {
-        int p = trPerimeter(a, b, c);
-        return Math.sqrt(p*sub(p,a)*sub(p,b)*sub(p,c));
+    public double trArea(int a, int b, int c) throws TriangleException {
+        if (checkSides(a, b, c)) throw new TriangleException("Отрицательная сторона треугольника");
+        if (checkTriangle(a, b, c)) throw new TriangleException("Длины не соответствуют сторонам треугольника");
+        double pp = trPerimeter2(a, b, c);
+        double result = Math.sqrt(pp*sub(pp,a)*sub(pp,b)*sub(pp,c));
+        double scale = Math.pow(10, 2);
+        return Math.ceil(result * scale) / scale;
     }
 
 }
