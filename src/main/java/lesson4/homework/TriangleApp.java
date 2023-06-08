@@ -1,9 +1,5 @@
 package lesson4.homework;
 
-import com.fasterxml.jackson.core.JsonpCharacterEscapes;
-
-import java.math.MathContext;
-
 /**
  * Класс для подсчета площади треугольника по трем известным сторонам
  */
