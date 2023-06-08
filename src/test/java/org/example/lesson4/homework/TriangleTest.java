@@ -1,4 +1,4 @@
-package org.example;
+package org.example.lesson4.homework;
 
 import lesson4.homework.TriangleApp;
 import lesson4.homework.TriangleException;
@@ -30,7 +30,7 @@ public class TriangleTest {
      * @param c третья сторона
      */
     @ParameterizedTest
-    @CsvSource({"5, 5, 5", "10, 2, 1", "3, 4, 100", "1, 10, 6", " 10, 3, 10"})
+    @CsvSource({"10, 2, 1", "3, 4, 100", "1, 10, 6"})
     void invalidSidesTest(int a, int b, int c) {
         TriangleApp triangle = new TriangleApp();
         Assertions.assertThrows(TriangleException.class, ()-> triangle.trArea(a, b, c));

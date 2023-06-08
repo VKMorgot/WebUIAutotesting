@@ -60,12 +60,12 @@ public class TriangleApp {
      * @return площадь треугольника
      */
     public double trArea(int a, int b, int c) throws TriangleException {
-        if (checkSides(a, b, c)) throw new TriangleException("Отрицательная сторона треугольника");
-        if (checkTriangle(a, b, c)) throw new TriangleException("Длины не соответствуют сторонам треугольника");
+        if (!checkSides(a, b, c)) throw new TriangleException("Отрицательная сторона треугольника");
+        if (!checkTriangle(a, b, c)) throw new TriangleException("Длины не соответствуют сторонам треугольника");
         double pp = trPerimeter2(a, b, c);
         double result = Math.sqrt(pp*sub(pp,a)*sub(pp,b)*sub(pp,c));
         double scale = Math.pow(10, 2);
-        return Math.ceil(result * scale) / scale;
+        return Math.round(result * scale) / scale;
     }
 
 }
