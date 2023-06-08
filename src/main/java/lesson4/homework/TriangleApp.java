@@ -1,5 +1,8 @@
 package lesson4.homework;
 
+/**
+ * Класс для подсчета площади треугольника по трем известным сторонам
+ */
 public class TriangleApp {
 
     /**
