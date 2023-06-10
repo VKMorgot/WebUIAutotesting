@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
+/**
+ * Проверка выхода с сайта
+ */
 public class SignOutTest extends CommonTest {
 
     @Test

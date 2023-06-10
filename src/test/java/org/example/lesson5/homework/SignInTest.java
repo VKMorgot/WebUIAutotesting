@@ -15,6 +15,7 @@ import java.time.Duration;
 import java.util.List;
 
 /**
+ * Проверка авторизации
  * Нет наследования CommonTest, потому что выполняется подробная проверка формы авторизации
  */
 public class SignInTest {
