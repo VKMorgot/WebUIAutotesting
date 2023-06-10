@@ -1,6 +1,7 @@
 package org.example.lesson4.homework;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class TriangleTest {
      * @param result результат проверки
      * @throws TriangleException исключение треугольника
      */
+    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
     @ParameterizedTest
     @CsvSource({"2, 3, 4, 2.90", "7, 7, 7, 21.22", "9, 5, 5, 9.81"})
     void triangleTest(int a, int b, int c, double result) throws TriangleException {
@@ -35,6 +37,7 @@ public class TriangleTest {
      * @param b вторая сторона
      * @param c третья сторона
      */
+    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
     @ParameterizedTest
     @CsvSource({"10, 2, 1", "3, 4, 100", "1, 10, 6"})
     void invalidSidesTest(int a, int b, int c) {
@@ -53,6 +56,7 @@ public class TriangleTest {
      * @param b вторая сторона
      * @param c третья сторона
      */
+    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
     @ParameterizedTest
     @CsvSource({"-2, 3, 5", "2, -3, 5", "2, 3, -5", "0, 0, 0", "2, 0, 5"})
     void negativeSidesTest(int a, int b, int c){
