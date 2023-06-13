@@ -1,8 +1,6 @@
 package org.example.lesson6.homework;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 /**
  * Страница "Новые лица"
