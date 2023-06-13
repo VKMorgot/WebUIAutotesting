@@ -1,6 +1,5 @@
-package org.example.lesson5.homework;
+package org.example.lesson6.homework;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -17,7 +16,6 @@ import java.util.List;
 public class SignOutTest extends CommonTest {
 
     @Test
-    @Disabled //отключено, чтобы не мешать тестам из lesson6.homework
     public void sighOutTest() throws PresentException {
 
             // выходим с сайта

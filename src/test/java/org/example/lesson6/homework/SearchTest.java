@@ -1,7 +1,6 @@
-package org.example.lesson5.homework;
+package org.example.lesson6.homework;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -18,7 +17,6 @@ public class SearchTest extends CommonTest {
     private static final String SEARCH_TITLE = "Поиск по ЖЖ";
 
     @Test
-    @Disabled //отключено, чтобы не мешать тестам из lesson6.homework
     public void searchTest() throws InterruptedException {
 
         // сохраняем оригинальное окно

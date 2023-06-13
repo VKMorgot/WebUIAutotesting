@@ -1,12 +1,12 @@
-package org.example.lesson5.homework;
+package org.example.lesson6.homework;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 /**
@@ -18,7 +18,6 @@ public class NewFacesTest extends CommonTest {
     private static final String NEW_FACES_TITLE = "Новые лица — ЖЖ";
 
     @Test
-    @Disabled //отключено, чтобы не мешать тестам из lesson6.homework
     public void newFacesSection() {
 
         // переходим на раздел "Новые лица"

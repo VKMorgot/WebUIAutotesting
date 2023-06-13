@@ -1,8 +1,7 @@
-package org.example.lesson5.homework;
+package org.example.lesson6.homework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +27,6 @@ public class SignInTest {
     private static final String PASSWORD = "r6A^%J6AZ.WUWck";
 
     @Test
-    @Disabled //отключено, чтобы не мешать тестам из lesson6.homework
     public void signInTest() throws PresentException {
 
         WebDriverManager.chromedriver().setup();
