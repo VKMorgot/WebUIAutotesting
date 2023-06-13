@@ -24,11 +24,11 @@ public class SearchTest extends CommonTest {
         searchElement.waitNewTabOpened(originalWindow);
 
         // ожидаем загрузки новой страницы с результатами поиска
-        SearchElement searchElementNew = new SearchElement(getDriver());
-        searchElementNew.waitingOfSearchResult();
+        SearchPage searchPage = new SearchPage(getDriver());
+        searchPage.waitingOfSearchResult();
 
         // проверяем заголовок страницы
-        Assertions.assertTrue(searchElementNew.getTitle().contains(searchElementNew.getSEARCH_TITLE()), "Неверный заголовок страницы: " + searchElementNew.getTitle());
+        Assertions.assertTrue(searchPage.getTitle().contains(searchPage.getSEARCH_TITLE()), "Неверный заголовок страницы: " + searchPage.getTitle());
 
     }
 }

@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * Страница "Новые лица"
+ */
 public class NewFacesPage extends Common {
 
     private final String NEW_FACES_TITLE = "Новые лица — ЖЖ";
@@ -14,10 +17,6 @@ public class NewFacesPage extends Common {
 
     public NewFacesPage(WebDriver driver) {
         super(driver);
-    }
-
-    public String getTitle() {
-        return getDriver().getTitle();
     }
 
 }

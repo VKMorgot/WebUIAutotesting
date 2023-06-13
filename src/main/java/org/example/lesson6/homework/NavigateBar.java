@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+/**
+ * Навигационная панель
+ */
 public class NavigateBar extends Common {
 
     private final String NEW_FACES = "НОВЫЕ ЛИЦА";

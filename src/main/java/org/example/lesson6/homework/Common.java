@@ -10,10 +10,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+/**
+ * Общие для всех страниц и элементов функции
+ */
 public abstract class Common {
 
     private final WebDriver driver;
 
+    /**
+     * Страница после загрузки
+     */
     @FindBy(css = ".mainpage__title")
     private WebElement mainPage;
 
@@ -31,7 +37,7 @@ public abstract class Common {
     }
 
     /**
-     * Ожидаем загрузки страницы после перехода по ссылке с навигационного бара
+     * Ожидаем загрузки страницы после перехода по ссылке с навигационной панели
      */
     protected void waitPageLoaded() {
         new WebDriverWait(getDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(getMainPage()));
@@ -55,5 +61,13 @@ public abstract class Common {
                 break;
             }
         }
+    }
+
+    /**
+     * Определяем заголовк страницы
+     * @return заголовок страницы
+     */
+    protected String getTitle() {
+        return getDriver().getTitle();
     }
 }
