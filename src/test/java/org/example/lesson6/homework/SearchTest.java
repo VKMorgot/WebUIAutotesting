@@ -15,6 +15,7 @@ import java.time.Duration;
 public class SearchTest extends CommonTest {
 
     private static final String SEARCH_TITLE = "Поиск по ЖЖ";
+    private static final String SEARCH_STRING = "pesen-net";
 
     @Test
     public void searchTest() throws InterruptedException {
@@ -22,36 +23,19 @@ public class SearchTest extends CommonTest {
         // сохраняем оригинальное окно
         String originalWindow = getDriver().getWindowHandle();
 
-        // нажимаем на значок поиска
-        WebElement searchIcon = getDriver().findElement(By.cssSelector(".s-do-item-search-btn"));
-        searchIcon.click();
+        // выполняем поиск на странице
+        SearchElement searchElement = new SearchElement(getDriver());
+        searchElement.toSearch(SEARCH_STRING);
 
-        // вводим текст в поле поиска
-        WebElement searchField = getDriver().findElement(By.cssSelector(".s-inline-search-input"));
-        searchField.sendKeys("pesen-net");
-        searchIcon.click();
+        // ожидаем открытия новой вкладки
+        searchElement.waitNewTabOpened(originalWindow);
 
-        // ожидаем открытия нового окна
-        while (getDriver().getWindowHandles().size() != 2) {
-            Thread.sleep(1000);
-        }
-
-        // поиск нового окна
-        for (String windowHandle : getDriver().getWindowHandles()) {
-            if (!originalWindow.contentEquals(windowHandle)) {
-                getDriver().switchTo().window(windowHandle);
-                break;
-            }
-        }
-
-        // ожидаем загрузки новой страницы
-        new WebDriverWait(getDriver(), Duration.ofSeconds(5))
-                .until(ExpectedConditions
-                        .visibilityOfElementLocated(By
-                                .xpath("//*[@id=\"cse-search-box\"]")));
+        // ожидаем загрузки новой страницы с результатами поиска
+        SearchElement searchElementNew = new SearchElement(getDriver());
+        searchElementNew.waitingOfSearchResult();
 
         // проверяем заголовок страницы
-        Assertions.assertTrue(getDriver().getTitle().contains(SEARCH_TITLE), "Неверный заголовок страницы: " + getDriver().getTitle());
+        Assertions.assertTrue(searchElementNew.getSearchTitle().contains(SEARCH_TITLE), "Неверный заголовок страницы: " + searchElementNew.getSearchTitle());
 
     }
 }
