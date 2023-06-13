@@ -10,6 +10,12 @@ import java.time.Duration;
 
 public class SearchElement extends Common {
 
+    private final String SEARCH_TITLE = "Поиск по ЖЖ";
+
+    public String getSEARCH_TITLE() {
+        return SEARCH_TITLE;
+    }
+
     @FindBy(css = ".s-do-item-search-btn")
     private WebElement searchBtn;
 
@@ -19,13 +25,11 @@ public class SearchElement extends Common {
     @FindBy(xpath = "//*[@id=\"cse-search-box\"]")
     private WebElement searchBox;
 
-    private String searchTitle;
-
     /**
      * Заголовок страницы с результатами поиска
      * @return заголовок страницы
      */
-    public String getSearchTitle() {
+    public String getTitle() {
         return getDriver().getTitle();
     }
 

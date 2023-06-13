@@ -2,19 +2,12 @@ package org.example.lesson6.homework;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 /**
  * Проверка работы поиска
  */
 public class SearchTest extends CommonTest {
 
-    private static final String SEARCH_TITLE = "Поиск по ЖЖ";
     private static final String SEARCH_STRING = "pesen-net";
 
     @Test
@@ -35,7 +28,7 @@ public class SearchTest extends CommonTest {
         searchElementNew.waitingOfSearchResult();
 
         // проверяем заголовок страницы
-        Assertions.assertTrue(searchElementNew.getSearchTitle().contains(SEARCH_TITLE), "Неверный заголовок страницы: " + searchElementNew.getSearchTitle());
+        Assertions.assertTrue(searchElementNew.getTitle().contains(searchElementNew.getSEARCH_TITLE()), "Неверный заголовок страницы: " + searchElementNew.getTitle());
 
     }
 }
