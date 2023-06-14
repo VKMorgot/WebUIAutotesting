@@ -55,27 +55,22 @@ public abstract class CommonTest {
         Assertions.assertDoesNotThrow(()-> getDriver().navigate().to(SITE), "Страница не доступна");
 
         // ожидаем кнопку "Войти"
-        new WebDriverWait(getDriver(), Duration.ofSeconds(10))
-                .until(ExpectedConditions
-                        .visibilityOfElementLocated(By
-                                .cssSelector(".s-header-item__link--login")));
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.waitLoginPage();
 
-        // нажимает на кнопку "Войти"
-        getDriver().findElement(By.cssSelector(".s-header-item__link--login")).click();
+        // нажимаем на кнопку "Войти"
+        loginPage.getLoginBtn().click();
 
         // ожидаем окна с формой авторизации
-        new WebDriverWait(getDriver(), Duration.ZERO).until(ExpectedConditions.visibilityOfElementLocated(By.name("action:login")));
+        AuthForm authForm = new AuthForm(getDriver());
+        authForm.waitAuthForm();
 
         // ввод логина и пароля
-        WebElement loginField = getDriver().findElement(By.id("user"));
-        loginField.sendKeys(LOGIN);
-        WebElement passField = getDriver().findElement(By.id("lj_loginwidget_password"));
-        passField.sendKeys(PASSWORD);
-        WebElement enterButton = getDriver().findElement(By.name("action:login"));
-        enterButton.click();
+        authForm.authorizeUser(LOGIN, PASSWORD);
 
         // ожидаем, что пользователь авторизовался
-        new WebDriverWait(getDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".s-header-item--user")));
+        UserIconElement userIcon = new UserIconElement(getDriver());
+        userIcon.waitUserIcon();
     }
 
     /**

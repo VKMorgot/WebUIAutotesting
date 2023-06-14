@@ -20,7 +20,8 @@ public class NewFacesTest extends CommonTest {
 
         // проверяем заголовок загруженной страницы
         NewFacesPage newFacesPage = new NewFacesPage(getDriver());
-        Assertions.assertTrue(newFacesPage.getTitle().contains(newFacesPage.getNEW_FACES_TITLE()), "Неверный заголовок страницы: " + newFacesPage.getTitle());
+        Assertions.assertEquals(newFacesPage.getTitle(), newFacesPage.getNEW_FACES_TITLE(),
+                "Неверный заголовок страницы: " + newFacesPage.getTitle());
 
     }
 }

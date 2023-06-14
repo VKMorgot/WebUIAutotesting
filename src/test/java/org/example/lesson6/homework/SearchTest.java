@@ -28,7 +28,8 @@ public class SearchTest extends CommonTest {
         searchPage.waitingOfSearchResult();
 
         // проверяем заголовок страницы
-        Assertions.assertTrue(searchPage.getTitle().contains(searchPage.getSEARCH_TITLE()), "Неверный заголовок страницы: " + searchPage.getTitle());
+        Assertions.assertEquals(searchPage.getTitle(), searchPage.getSEARCH_TITLE(),
+                "Неверный заголовок страницы: " + searchPage.getTitle());
 
     }
 }
