@@ -42,6 +42,7 @@ public abstract class CommonTest {
         options.addArguments("--incognito");
         options.addArguments("start-maximized");
         options.addArguments("--remote-allow-origins=*");
+//        options.addArguments("--headless");
         setDriver(new ChromeDriver(options));
 
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
