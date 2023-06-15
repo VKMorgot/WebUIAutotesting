@@ -1,6 +1,8 @@
 package org.example.lesson6.homework;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -9,6 +11,8 @@ import org.junit.jupiter.api.Test;
 public class NewFacesTest extends CommonTest {
 
     @Test
+    @DisplayName("Раздел 'Новые лица'")
+    @Description("Проверяем корректность перехода на раздел")
     public void newFacesSection() {
 
         // переходим на раздел "Новые лица"

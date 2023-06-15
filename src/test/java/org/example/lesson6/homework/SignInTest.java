@@ -1,7 +1,9 @@
 package org.example.lesson6.homework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,6 +36,8 @@ public class SignInTest {
     }
 
     @Test
+    @DisplayName("Авторизация пользователя")
+    @Description("Проверяем авторизацию зарегистрированного пользователя")
     public void signInTest() {
 
         WebDriverManager.chromedriver().setup();

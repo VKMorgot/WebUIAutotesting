@@ -1,6 +1,8 @@
 package org.example.lesson6.homework;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -11,6 +13,8 @@ public class SearchTest extends CommonTest {
     private static final String SEARCH_STRING = "pesen-net";
 
     @Test
+    @DisplayName("Поиск по сайту")
+    @Description("Проверяем работу поиска")
     public void searchTest() throws InterruptedException {
 
         // сохраняем оригинальное окно
