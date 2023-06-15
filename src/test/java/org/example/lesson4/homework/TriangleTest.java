@@ -1,7 +1,9 @@
 package org.example.lesson4.homework;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.slf4j.Logger;
@@ -19,9 +21,10 @@ public class TriangleTest {
      * @param result результат проверки
      * @throws TriangleException исключение треугольника
      */
-    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
     @ParameterizedTest
     @CsvSource({"2, 3, 4, 2.90", "7, 7, 7, 21.22", "9, 5, 5, 9.81"})
+    @DisplayName("Вычисление площади треугольника")
+    @Description("Проверяем корректность вычисления")
     void triangleTest(int a, int b, int c, double result) throws TriangleException {
         TriangleApp triangle = new TriangleApp();
         logger.info("Проверка корректности вычисления");
@@ -37,9 +40,11 @@ public class TriangleTest {
      * @param b вторая сторона
      * @param c третья сторона
      */
-    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
+//    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
     @ParameterizedTest
     @CsvSource({"10, 2, 1", "3, 4, 100", "1, 10, 6"})
+    @DisplayName("Проверка свойства сторон треугольника")
+    @Description("Сторона не может быть больше суммы двух других сторон")
     void invalidSidesTest(int a, int b, int c) {
         TriangleApp triangle = new TriangleApp();
         logger.info("Проверка, что сторона не может быть больше суммы двух других сторон");
@@ -56,9 +61,11 @@ public class TriangleTest {
      * @param b вторая сторона
      * @param c третья сторона
      */
-    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
+//    @Disabled //отключено, чтобы не мешать тестам из lesson5.homework
     @ParameterizedTest
     @CsvSource({"-2, 3, 5", "2, -3, 5", "2, 3, -5", "0, 0, 0", "2, 0, 5"})
+    @DisplayName("Проверка корректности заданных сторон треугольника")
+    @Description("Стороны не могут быть нулевыми или отрицательными")
     void negativeSidesTest(int a, int b, int c){
         TriangleApp triangle = new TriangleApp();
         logger.info("Проверка, что не может быть нулевых и отрицательных сторон");
