@@ -27,6 +27,7 @@
 
   <dependencies>
 
+<!--    подлключение отчетов logback-->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
@@ -40,6 +41,7 @@
       <scope>test</scope>
     </dependency>
 
+<!--    подключение junit-->
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-commons</artifactId>
@@ -70,6 +72,7 @@
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<!--    подключение selenium-->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
@@ -82,6 +85,7 @@
       <scope>compile</scope>
     </dependency>
 
+<!--    подключение allure-->
     <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-junit5</artifactId>
@@ -93,6 +97,28 @@
       <artifactId>allure-java-commons</artifactId>
       <version>2.15.0</version>
       <scope>compile</scope>
+    </dependency>
+
+<!--    подключение cucumber-->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>7.1.0</version>
+      <scope>test</scope>
+    </dependency>
+
+<!--    подключение selenide-->
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide</artifactId>
+      <version>6.1.2</version>
+      <scope>test</scope>
     </dependency>
 
   </dependencies>
